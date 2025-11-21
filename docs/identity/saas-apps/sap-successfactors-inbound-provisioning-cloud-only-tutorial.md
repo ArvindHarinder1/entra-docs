@@ -161,7 +161,7 @@ This section provides steps for user account provisioning from SuccessFactors to
 
 6. After the app is added and the app details screen is shown, select **Provisioning**
 
-7. Change the **Provisioning** **Mode** to **Automatic**
+7. Click on **New configuration** at the top of the page.
 
 8. Complete the **Admin Credentials** section as follows:
 
@@ -171,19 +171,22 @@ This section provides steps for user account provisioning from SuccessFactors to
 
    * **Tenant URL –** Enter the name of the SuccessFactors OData API services endpoint. Only enter the host name of server without http or https. This value should look like: **api-server-name.successfactors.com**.
 
+   * Select the **Test Connection** button. If the connection test succeeds, select the **Create** button at  the bottom.. If it fails, double-check that the SuccessFactors credentials and URL are valid.
+
+   * Once the credentials are saved successfully, the **Attribute mappings** section displays the default mapping **Synchronize SuccessFactors Users to Microsoft Entra ID**
+
+1. Once the save operation is successful, you will see see a properties section in the Overview. Before proceeding to the next step, make sure you provide a valid notification email ID in the properties section and Save the configuration once more.
+   
    * **Notification Email –** Enter your email address, and check the "send email if failure occurs" checkbox.
     > [!NOTE]
     > The Microsoft Entra provisioning service sends email notification if the provisioning job goes into a [quarantine](~/identity/app-provisioning/application-provisioning-quarantine-status.md) state.
 
-   * Select the **Test Connection** button. If the connection test succeeds, select the **Save** button at  the top. If it fails, double-check that the SuccessFactors credentials and URL are valid.
-
-   * Once the credentials are saved successfully, the **Mappings** section displays the default mapping **Synchronize SuccessFactors Users to Microsoft Entra ID**
 
 ### Part 2: Configure attribute mappings
 
 In this section, you configure how user data flows from SuccessFactors to Microsoft Entra ID.
 
-1. On the Provisioning tab under **Mappings**, select **Synchronize SuccessFactors Users to Microsoft Entra ID**.
+1. On the Attribute mapping tab, select **Synchronize SuccessFactors Users to Microsoft Entra ID**.
 
 1. In the **Source Object Scope** field, you can select which sets of users in SuccessFactors should be in scope for provisioning to Microsoft Entra ID, by defining a set of attribute-based filters. The default scope is "all users in SuccessFactors". Example filters:
 
